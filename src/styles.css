@@ -1,0 +1,93 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #176B87, #64CCC5);
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calculator-grid {
+    display: grid;
+    background-color: rgba(0, 28, 48, 75%);
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(8rem, auto) repeat(5, 6rem);
+    gap: 1px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+.output {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-output {
+    font-size: 1.5rem;
+    color: rgba(218, 255, 251, 75%);
+
+}
+
+.current-output {
+    font-size: 2.5rem;
+    color: rgb(218, 255, 251);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+
+
+.calculator-grid > button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color:#DAFFFB;
+    background-color: rgba(255, 255, 255, 10%);
+    font-size: 1.75rem;
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color: rgba(255, 255, 255, 15%);
+}
+
+.calculator-grid > .equal {
+    background-color: rgb(100, 204, 197);
+    border-bottom-right-radius: 15px;
+
+}
+.calculator-grid > .dot {
+    border-bottom-left-radius: 15px;
+}
+
+.calculator-grid > .equal:hover,
+.calculator-grid > .equal:focus {
+    background-color: rgba(100, 204, 197, 0.9);
+}
+
+.calculator-grid > .operator {
+    background-color: rgba(255, 255, 255, 15%);
+}
+.calculator-grid > .operator:hover,
+.calculator-grid > .operator:focus {
+    background-color: rgba(255, 255, 255, 20%);
+}
+
+.calculator-grid > .delete {
+    background-color: rgb(242, 76, 61);
+}
+.calculator-grid > .delete:hover,
+.calculator-grid > .delete:focus {
+    background-color: rgba(242, 76, 61, 0.85);
+}
